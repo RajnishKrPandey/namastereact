@@ -1,0 +1,29 @@
+{
+  "name": "namastereact",
+  "version": "1.0.0",
+  "description": "This is a live course",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RajnishKrPandey/namastereact.git"
+  },
+  "author": "Rajnish Kumar Pandey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RajnishKrPandey/namastereact/issues"
+  },
+  "homepage": "https://github.com/RajnishKrPandey/namastereact#readme",
+  "devDependencies": {
+    "parcel": "^2.8.2",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
