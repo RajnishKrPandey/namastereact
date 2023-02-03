@@ -45,10 +45,42 @@ const HeaderComponent = () => {
   );
 };
 
-const AppLayout = () => {
-  return {};
+const Body = () => {
+  return <h4>Body</h4>;
 };
+
+const Footer = () => {
+  return <h4>Footer</h4>;
+};
+
+const AppLayout = () => {
+  return (
+    <React.Fragment>
+      <Header />
+      <Body />
+      <Footer />
+    </React.Fragment>
+  );
+};
+
+const styleObj = {
+  backgroundColor: 'red',
+};
+
+// Inline styling in React
+const jsx = (
+  // <div style={styleObj}>
+  <div
+    className='jsx'
+    style={{
+      backgroundColor: 'red',
+    }}
+  >
+    <h1>JSX</h1>
+    <h1>Second JSX</h1>
+  </div>
+);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(<HeaderComponent />);
+root.render(jsx);
