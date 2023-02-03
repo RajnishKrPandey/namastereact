@@ -46,23 +46,42 @@ const Header = () => {
   );
 };
 
+const dominoPizzas = {
+  name: 'Domino Pizzas',
+  image:
+    'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/a1wyqvlqhfjlguwjgkti',
+  cusines: ["Domino's", 'Ranchi'],
+  rating: 4.2,
+};
+
 const RestaurantCard = () => {
   return (
     <div className="card">
-      <img
-        src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/a1wyqvlqhfjlguwjgkti"
-        alt=""
-      />
-      <h2>Domino's Pizza</h2>
-      <h3>Domino's, Ranchi</h3>
-      <h4>4.2 stars</h4>
+      <img src={dominoPizzas.image} alt="" />
+      <h2>{dominoPizzas.name}</h2>
+      <h3>{dominoPizzas.cusines.join(',')}</h3>
+      <h4>{dominoPizzas.rating} stars</h4>
     </div>
   );
 };
 
 const Body = () => {
   return (
-    <RestaurantCard />
+    <div className="restaurant-list">
+      <RestaurantCard />
+      <RestaurantCard />
+      <RestaurantCard />
+      <RestaurantCard />
+      <RestaurantCard />
+      <RestaurantCard />
+      <RestaurantCard />
+      <RestaurantCard />
+      <RestaurantCard />
+      <RestaurantCard />
+      <RestaurantCard />
+      <RestaurantCard />
+      <RestaurantCard />
+    </div>
   );
 };
 
