@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom/client';
 
 /**
         Header
-           - Logo
+           - Logo(Title)
            - Nav Items (Right Side)
            - Cart
         Body
            - Search bar
            - RestaurantList
+             - RestaurantCard (Many cards)
                - Image
                - Name
                - Rating
@@ -29,7 +30,7 @@ const Title = () => (
   </a>
 );
 
-const HeaderComponent = () => {
+const Header = () => {
   return (
     <div className="header">
       <Title />
@@ -45,8 +46,24 @@ const HeaderComponent = () => {
   );
 };
 
+const RestaurantCard = () => {
+  return (
+    <div className="card">
+      <img
+        src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/a1wyqvlqhfjlguwjgkti"
+        alt=""
+      />
+      <h2>Domino's Pizza</h2>
+      <h3>Domino's, Ranchi</h3>
+      <h4>4.2 stars</h4>
+    </div>
+  );
+};
+
 const Body = () => {
-  return <h4>Body</h4>;
+  return (
+    <RestaurantCard />
+  );
 };
 
 const Footer = () => {
@@ -55,32 +72,14 @@ const Footer = () => {
 
 const AppLayout = () => {
   return (
-    <React.Fragment>
+    <>
       <Header />
       <Body />
       <Footer />
-    </React.Fragment>
+    </>
   );
 };
 
-const styleObj = {
-  backgroundColor: 'red',
-};
-
-// Inline styling in React
-const jsx = (
-  // <div style={styleObj}>
-  <div
-    className='jsx'
-    style={{
-      backgroundColor: 'red',
-    }}
-  >
-    <h1>JSX</h1>
-    <h1>Second JSX</h1>
-  </div>
-);
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(jsx);
+root.render(<AppLayout />);
