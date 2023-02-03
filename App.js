@@ -1,53 +1,48 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-/*
-* Created A Server
-* HMR - Hot Module Replacement
-* File Watcher Algorithms - C++
-* BUNDLING
-* MINIFY
-* Cleaning our Code
-* Dev abd Production Build
-* Super Fast Build Algorithms
-* Image Optimization
-* Caching while developement
-* Comprehension
-* Compatible with older versions of browsers
-* HTTPS on dev
-* port number
-* Consistent Hashing algorithms
-* Zero config
-* Tree Shaking - Removing unwanted codes
-*
-*
-* Transitive dependencies 
-*/
-
-// React.createElement => Object => HTML(DOM)
-
-const heading = React.createElement(
-  'h1',
-  {
-    id: 'title',
-    key: 'h1',
-  },
-  'Namaste React'
-);
-
-
-//JSX => React.createElement => Object => HTML(DOM)
-
-// one line
-// const heading2 = <h1>Namaste React2</h1>
-
-// multiple lines
 const heading2 = (
-  <h1 id='title' key='h2'>
-    Namaste React 
+  <h1 id="title" key="h2">
+    Namaste React
   </h1>
 );
 
+// React Component
+// - Functional - NEW
+
+// IN ONE LINE
+const HeaderComponent1 = () => {
+  return <div><h1>Namaste React Functional Component</h1><h2>This is h2 tage</h2></div> 
+}
+
+// IN MULTIPLE LINES
+const HeaderComponent2 = () => {
+  return (
+    <div>
+      <h1>Namaste React Functional Component</h1>
+      <h2>This is h2 tage</h2>
+    </div>
+  );
+};
+
+// WE CAN WRITE NORMAL FUNCTION ALSO
+const HeaderComponent3 = function () {
+  return (
+    <div>
+      <h1>Namaste React Functional Component</h1>
+      <h2>This is h2 tage</h2>
+    </div>
+  );
+};
+
+
+// IN MULTIPLE LINES WE WRITE MOSTLY THIS TYPES OF CODE
+const HeaderComponent4 = () => (
+  <div>
+      <h1>Namaste React Functional Component</h1>
+      <h2>This is h2 tage</h2>
+    </div>
+);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -55,4 +50,3 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 //async defer
 root.render(heading, heading2);
-
